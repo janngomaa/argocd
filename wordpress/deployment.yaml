@@ -18,7 +18,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: wordpress:cli-2.4.0
+      - image: wordpress:5.5.1
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
