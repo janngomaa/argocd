@@ -1,25 +1,25 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: wordpress
+  name: wpcli
   labels:
-    app: wordpress
+    app: wpcli
 spec:
   selector:
     matchLabels:
-      app: wordpress
+      app: wpcli
       tier: frontend
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: wordpress
+        app: wpcli
         tier: frontend
     spec:
       containers:
       - image: wordpress:cli
-        name: wordpress
+        name: wpcli
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql
@@ -32,11 +32,11 @@ spec:
               key: mysql-root-password
         ports:
         - containerPort: 80
-          name: wordpress
+          name: wpcli
         volumeMounts:
         - name: wps
           mountPath: /var/www/html
       volumes:
       - name: wps
         persistentVolumeClaim:
-          claimName: wordpress-pvc
+          claimName: wpcli-pvc

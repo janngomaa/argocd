@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wpcli
+  labels:
+    app: wpcli
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: wpcli
+    tier: frontend
+  type: NodePort
