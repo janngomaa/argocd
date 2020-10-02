@@ -20,7 +20,8 @@ spec:
       containers:
       - image: djibysow/wordpress:1.1
         name: wordpress
-        command: ["/scripts/install-wp-site.bash"]
+        command: ["bash"]
+        args: ["/scripts/install-wp-site.bash"]
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql
