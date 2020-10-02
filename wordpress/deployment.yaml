@@ -20,6 +20,8 @@ spec:
       containers:
       - image: djibysow/wordpress:1.0
         name: wordpress
+        command: ["wp core install"]
+        args: ["--url=http://localhost:30487 --title=Example --admin_user=wango --admin_password=p@ssw0rd --allow-root"]
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql
