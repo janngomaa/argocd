@@ -18,7 +18,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: wordpress:5.5.1 #djibysow/wordpress:1.1
+      - image: djibysow/wordpress:1.0
         name: wordpress
         #command: ["wp"]
         #args: ["core", "install", "--url=http://localhost:31909", "--title=Example", "--admin_user=wango", "--admin_password=p@ssw0rd", "--allow-root"]
