@@ -21,9 +21,7 @@ spec:
       - image: djibysow/wordpress:1.0
         name: wordpress
         command: ["wp"]
-        args: ["core", "install", "--url=http://localhost:31909", "--title=Example", 
-                "--admin_user=wango", "--admin_email=djiby.sow.a@gmail.com", 
-                "--admin_password=p@ssw0rd", "--allow-root", "--path=/var/www/html"]
+        args: ["core", "install", "--url=http://localhost:31909", "--title=Example", "--admin_user=wango", "--admin_email=djiby.sow.a@gmail.com", "--admin_password=p@ssw0rd", "--allow-root", "--path=/var/www/html"]
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql
