@@ -20,6 +20,10 @@ spec:
       containers:
       - image: djibysow/wordpress:1.0
         name: wordpress
+        lifecycle:
+          postStart:
+            exec:
+              command: ["/bin/sh", "-c", "installwp.sh"]
         #command: ["bash"]
         #command: ["/bin/installwp.sh"]
         #args: ["core", "install", "--url=http://localhost:31909", "--title=Example", "--admin_user=wango", "--admin_email=djiby.sow.a@gmail.com", "--admin_password=p@ssw0rd", "--allow-root", "--path=/var/www/html"]
