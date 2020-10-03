@@ -20,7 +20,8 @@ spec:
       containers:
       - image: djibysow/wordpress:1.0
         name: wordpress
-        command: ["installwp"]
+        command: ["bash"]
+        args: ["/bin/installwp.sh"]
         #args: ["core", "install", "--url=http://localhost:31909", "--title=Example", "--admin_user=wango", "--admin_email=djiby.sow.a@gmail.com", "--admin_password=p@ssw0rd", "--allow-root", "--path=/var/www/html"]
         env:
         - name: WORDPRESS_DB_HOST
